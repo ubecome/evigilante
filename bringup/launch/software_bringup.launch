@@ -1,11 +1,8 @@
 <launch>
 
 <!-- Turtlesim Node-->
- <node pkg="turtlesim" type="turtlesim_node" name="turtle_bringup"/>
-<rosparam command="load" file="$(find bringup)/config/patrol.yaml" />
-
-
-<node name="Gotogoal_Listener" pkg="bringup" type="gotogoal.py" output="screen"/>
-<node name="Talker" pkg="bringup" type="yamlreader.py" output="screen" />
+<node pkg="turtlesim" type="turtlesim_node" name="turtle_bringup"/>
+<include file="$(find supervisor)/launch/supervisor.launch" />
+<include file="$(find configuration)/launch/configuration.launch" />
 
 </launch>

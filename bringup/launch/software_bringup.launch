@@ -5,7 +5,7 @@
 <rosparam command="load" file="$(find bringup)/config/patrol.yaml" />
 
 
-<node name="Gotogoal_Listener" pkg="bringup" type="gotogoal.py" output="screen"/>
-<node name="Talker" pkg="bringup" type="yamlreader.py" output="screen" />
+<node name="Gotogoal_Listener" pkg="bringup" type="get_goal.py" output="screen"/>
+<node name="Talker" pkg="bringup" type="yamlreader.py" />
 
 </launch>

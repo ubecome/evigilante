@@ -7,15 +7,16 @@ from math import pow, atan2, sqrt
 def callback(data):
     id = data.id
     #gotogoal = data.pose
+    print data
     x = data.pose.x
     y = data.pose.y
     gotogoal_x=0
     gotogoal_y=0
     gotogoal_x=x
     gotogoal_y=y
-    print gotogoal_x,gotogoal_y
+    #print gotogoal_x,gotogoal_y
     #j+= 1
-    print "Goal point Received :  id = " + str(id) + "  , x = " + str(x) + " , y = " + str(y)
+    #print "Goal point Received :  id = " + str(id) + "  , x = " + str(x) + " , y = " + str(y)
 
 def listener():
     rospy.init_node('custom_listener', anonymous=True)
